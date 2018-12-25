@@ -88,3 +88,45 @@
 
     hyper parameter: it's the parameters of the algorithm, not the model. when the model has the overfitting problem, we need to use regularization method to solve the problem, and the hyper parameters are parameters of the regularization algorithm.
 
+13. What do model-based learning algorithms search for? What is the most common strategy they use to succeed? How do they make predictions?
+
+    Model based learning algorithms search for **an optimal value** for the model parameters for prediction tasks. The most common strategy they use to succeed is training from data, **use cost function to estimate how bad the model perform**. When we get the model parameters, then when we get new data instances, we plug the data feature into the model, and calculate the prediction.
+
+14. Can you name four of the main challenges in Machine Learning?
+
+    1. Insufficient Quantity of Training Data
+    2. sampling bias, nonrepresentative training data
+    3. overfitting
+    4. underfitting
+    5. poor-quality of data
+    6. irrelevant features
+
+15. If your model performs great on the training data but generalizes poorly to new instances, what is happening? can you name three possible solutions?
+
+    It may overfitting, or it may testing on the same data sets, the solutions are:
+
+    1. when overfitting, we can use regularization method or dimensional reduction
+    2. ~~prepare another varify data set~~
+    3. ~~use cross validation~~
+    4. get more data
+
+16. What is a test set and why would you want to use it?
+
+    test set can do some test predictions before you launch your model, it's part of the sample data, but without training with it, after test prediction, we know how our model works. 
+
+    the answer from the book:
+
+    The test set is used to estimate the generalization error that a model will make on new instances, before the model is launched in production.
+
+17. What is the purpose of a validation set?
+
+    The main purpose of a validation set is to tune the hyperparameter and **compare models**
+
+18. What can go wrong if you tune hyperparameters using the test set?
+
+    1. If we use test set to tune the hyperparameters, the model may work well on test set, but the correction rate may decrease when it encounters new data.
+
+19. What is cross-validation and why would you prefer it to a validation set?
+
+    it's a technique make it possible to compare models without the need for a separate validation set. This saves the precious training data.
+
